@@ -23,20 +23,31 @@
  <form method="post" action="{{ route('mahasiswa.store') }}" id="myForm">
  @csrf
  <div class="form-group">
- <label for="Nim">Nim</label> 
- <input type="text" name="Nim" class="form-control" id="Nim" aria-describedby="Nim" > 
+    <label for="Nim">Nim</label> 
+    <input type="text" name="Nim" class="form-control" id="Nim" aria-describedby="Nim" > 
  </div>
  <div class="form-group">
- <label for="Nama">Nama</label> 
- <input type="Nama" name="Nama" class="form-control" id="Nama" aria-describedby="Nama" > 
+    <label for="Nama">Nama</label> 
+    <input type="Nama" name="Nama" class="form-control" id="Nama" aria-describedby="Nama" > 
+ </div>
+ <div>
+    <label for="Email">Email</label> 
+    <input type="Email" name="Email" class="form-control" id="Email" aria-describedby="Email" > 
  </div>
  <div class="form-group">
- <label for="Kelas">Kelas</label> 
- <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="password" > 
+    <label for="Kelas">Kelas</label> 
+    <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="password" > 
  </div>
  <div class="form-group">
- <label for="Jurusan">Jurusan</label> 
- <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" aria-describedby="Jurusan" > 
+    <label for="Jurusan">Jurusan</label> 
+    <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" aria-describedby="Jurusan" > 
+ </div>
+<div class="form-group">
+    <label for="Alamat">Alamat</label> 
+    <input type="Alamat" name="Alamat" class="form-control" id="Alamat" aria-describedby="Alamat" > 
+ </div>
+    <label for="TanggalLahir">TanggalLahir</label> 
+    <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" aria-describedby="TanggalLahir" > 
  </div>
  <button type="submit" class="btn btn-primary">Submit</button>
  </form>

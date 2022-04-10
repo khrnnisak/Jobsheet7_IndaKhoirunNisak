@@ -19,7 +19,10 @@
         protected $fillable = [
             'Nim',
             'Nama',
+            'Email',
             'Kelas',
             'Jurusan',
+            'Alamat',
+            'TanggalLahir',
         ];
     };
