@@ -73,6 +73,7 @@ class MahasiswaController extends Controller
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
         $mahasiswa = Mahasiswa::with('kelas')->where('nim', $Nim)->first();
             return view('mahasiswa.detail', ['Mahasiswa' => $mahasiswa]);
+    
     }
 
     public function edit($Nim)
@@ -127,5 +128,9 @@ class MahasiswaController extends Controller
 		$mahasiswa = DB::table('mahasiswa')
 		->where('nama','like',"%".$search."%")->paginate(3);
         return view('mahasiswa.index', compact('mahasiswa'))->with('i', (request()->input('page', 1) - 1) * 5);	
+    }
+    public function nilai($Nim){
+        $nilai = Mahasiswa::with('kelas', 'matakuliah')->find($Nim);
+        return view('mahasiswa.nilai',compact('nilai'));
     }
 };
