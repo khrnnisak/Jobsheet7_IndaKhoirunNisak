@@ -10,9 +10,9 @@
             </div>
             <br><br>
             <div class="float-left my-2">
-                <p><strong>Nama :</strong> {{ $mahasiswa_matakuliah->nama }}</p>
-                <p><strong>NIM :</strong> {{ $mahasiswa_matakuliah->nim }}</p>
-                <p><strong>Kelas :</strong> {{ $mahasiswa_matakuliah->kelas->nama_kelas }}</p>
+                <p><strong>Nama :</strong> {{$Mahasiswa->nama}}</p>
+                <p><strong>NIM :</strong> {{$Mahasiswa->nim}}</p>
+                <p><strong>Kelas :</strong> {{$Mahasiswa->kelas->nama_kelas }}</p>
             </div>
         </div>
     </div>
@@ -24,12 +24,12 @@
             <th><strong>Semester</strong></th>
             <th><strong>Nilai</strong></th>
         </tr>
-        @foreach($nilai as $score)
+        @foreach($matkul as $score)
         <tr>
             <td>{{$score->matakuliah->nama_matkul}}</td>
             <td>{{$score->matakuliah->sks}}</td>
             <td>{{$score->matakuliah->semester}}</td>
-            <td>{{$score->pivot->nilai}}</td>
+            <td>{{$score->nilai}}</td>
         </tr>
         @endforeach
 

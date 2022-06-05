@@ -10,6 +10,7 @@ use App\Models\matakuliah;
 class Mahasiswa_MataKuliah extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
     protected $table = 'mahasiswa_matakuliah';
 
     protected $fillable = [
@@ -17,12 +18,10 @@ class Mahasiswa_MataKuliah extends Model
         'matakuliah_id',
         'nilai',
     ];
-    public function mahasiswa()
-    {
-        return $this->hasMany(Mahasiswa::class);
-    }
-    public function matakuliah()
-    {
-        return $this->hasMany(Matakuliah::class);
+    
+    public function mahasiswa(){
+        return $this->belongsTo(Mahasiswa::class);
+    }public function matakuliah(){
+        return $this->belongsTo(Matakuliah::class);
     }
 }

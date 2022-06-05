@@ -30,7 +30,12 @@
         public function kelas(){
             return $this->belongsTo(Kelas::class);
         }
-        public function matakuliah(){
-            return $this->belongsToMany(Matakuliah::class);
+        //public function matakuliah(){
+          //  return $this->hasMany(Matakuliah::class);
+        //}
+        public function mahasiswa_matakuliah(){
+        return $this->hasMany(Mahasiswa_Matakuliah::class);
+        //return $this->belongsToMany(MataKuliah::class, 'mahasiswa_matakuliah');
+        
         }
-    };
+    }

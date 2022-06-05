@@ -14,11 +14,14 @@ class CreateMahasiswaMatakuliahTable extends Migration
     public function up()
     {
         Schema::create('mahasiswa_matakuliah', function (Blueprint $table) {
-            $table->id();
-            $table->integer('matakuliah_id');
-            $table->integer('mahasiswa_id');
-            $table->integer('nilai');
-            $table->timestamps();
+                $table->id();
+                $table->unsignedBigInteger('mahasiswa_id')->nullable();
+                $table->foreign('mahasiswa_id')->references('id_mahasiswa')->on('mahasiswa');
+                $table->unsignedBigInteger('matakuliah_id')->nullable();
+                $table->foreign('matakuliah_id')->references('id')->on('matakuliah');
+                $table->integer('nilai');
+                $table->timestamps();
+            
         });
     }
 

@@ -16,43 +16,48 @@ class NilaiSeeder extends Seeder
     {
         $nilai = [
             [
-                'matakuliah_id' => 1,
                 'mahasiswa_id' => 1,
+                'matakuliah_id' => 1,
                 'nilai' => 90,
             ],
             [
-                'matakuliah_id' => 2,
                 'mahasiswa_id' => 1,
+                'matakuliah_id' => 2,
                 'nilai' => 87,
             ],
             [
-                'matakuliah_id' => 3,
                 'mahasiswa_id' => 1,
+                'matakuliah_id' => 3,
                 'nilai' => 88,
             ],
             [
-                'matakuliah_id' => 4,
+                
                 'mahasiswa_id' => 1,
+                'matakuliah_id' => 4,
                 'nilai' => 90,
             ],
             [
-                'matakuliah_id' => 1,
+                
                 'mahasiswa_id' => 2,
+                'matakuliah_id' => 1,
                 'nilai' => 80,
             ],
             [
-                'matakuliah_id' => 2,
+                
                 'mahasiswa_id' => 2,
+                'matakuliah_id' => 2,
                 'nilai' => 75,
             ],
             [
-                'matakuliah_id' => 3,
+
                 'mahasiswa_id' => 2,
+                'matakuliah_id' => 3,
                 'nilai' => 89,
             ],
             [
-                'matakuliah_id' => 4,
+                
                 'mahasiswa_id' => 2,
+                'matakuliah_id' => 4,
                 'nilai' => 88,
             ],
         ];

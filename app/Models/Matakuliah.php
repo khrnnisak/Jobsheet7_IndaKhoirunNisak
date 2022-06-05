@@ -8,7 +8,9 @@ use App\Models\Matakuliah;
 
 class Matakuliah extends Model
 {
-    protected $primaryKey = 'id'; // Memanggil isi DB Dengan primarykey
+    protected $table='matakuliah'; 
+    protected $primaryKey = 'id';
+
         /**
          * The attributes that are mass assignable.
          *
@@ -17,13 +19,13 @@ class Matakuliah extends Model
         protected $fillable = [
             'NamaMatkul',
             'SKS',
+            'Jam',
             'Semester',
         ];
     
-        public function mahasiswa(){
-            return $this->belongsToMany(Mahasiswa::class);
-        }
-        public function mahasiswa_matakuliah(){
-            return $this->belongsToMany(Mahasiswa_Matakuliah::class);
-        }
+        public function mahasiswa_matakuliah()
+    {
+        return $this->hasMany(Mahasiswa_Matakuliah::class);
+        //return $this->belongsToMany(Mahasiswa::class, 'mahasiswa_matakuliah');
+    }
 }
