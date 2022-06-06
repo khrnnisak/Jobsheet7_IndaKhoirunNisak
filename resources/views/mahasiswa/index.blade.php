@@ -9,6 +9,7 @@
             <div class="float-right my-2">
                 <a class="btn btn-success" href="{{ route('mahasiswa.create') }}"> Input Mahasiswa</a>
             </div> 
+            
             <div class="form-group">
             <form action="{{ route('search') }}" method="GET">
                 <input type="text" name="search" placeholder="Search..." value="{{ old('search') }}">
@@ -32,6 +33,7 @@
             <th>Jurusan</th>
             <th>Alamat</th>
             <th>Tanggal Lahir</th>
+            <th>Foto</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($paginate as $mhs)
@@ -44,6 +46,7 @@
                 <td>{{ $mhs ->jurusan }}</td>
                 <td>{{ $mhs ->alamat }}</td>
                 <td>{{ $mhs ->tanggallahir }}</td>
+                <td><img width="50px" src="{{asset('storage/'.$mhs->foto)}}"> 
                 <td>
                 <form action="{{ route('mahasiswa.destroy',['mahasiswa'=>$mhs->nim]) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('mahasiswa.show',$mhs->nim) }}">Show</a>

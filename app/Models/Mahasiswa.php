@@ -23,6 +23,7 @@
             'Email',
             'Kelas',
             'Jurusan',
+            'Foto',
             'Alamat',
             'TanggalLahir',
         ];

@@ -34,4 +34,5 @@ class CreateMahasiswaMatakuliahTable extends Migration
     {
         Schema::dropIfExists('mahasiswa_matakuliah');
     }
+
 }
